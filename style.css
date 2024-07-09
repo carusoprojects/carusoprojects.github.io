@@ -1,200 +1,112 @@
+:root {
+    --color-brand: #8D45FF;
+}
+
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 body {
-    background: #F9F9F9;
+    color: white;
+    padding: 0;
+    margin: 0;
+    background-color: #0F0F0F;
 }
 
-header, .sidebar {
-    position: fixed;
-    top: 0;
-}
-
-header {
-    left: 60px;
-    width: calc(100% - 60px);
-    height: 60px;
-    background: white;
-}
-
-header::after {
-    content: '';
-    display: table;
-    overflow: hidden;
-    clear: both;
-}
-
-header .logo, header .searchbar, header .actions {
-    float: left;
-    height: 100%;
-}
-
-header .logo {
-    position: relative;
-    width: 20%;
-}
-
-header .logo img {
-    margin-top: 10px;
-    height: 40px;
-}
-
-header .searchbar {
-    width: 60%;
+.announce {
+    font-size: 14px;
+    padding: 10px 0;
+    color: var(--color-brand);
     text-align: center;
+    border-bottom: 1px solid #1C1C1C;
 }
 
-header .searchbar .input-group {
-    width: auto;
-    display: inline-block;
-    height: 40px;
-    margin-top: 10px;
+.navbar {
+    border-bottom: 1px solid #1C1C1C;
+}
+
+.grid {
+    height: 80px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1100px;
+}
+
+.logo-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.pages  {
+    display: flex;
+    justify-content: center;
+}
+
+.items {
+    font-size: 16px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.item {
+    color: rgba(221, 222, 228, 0.7);
+    justify-content: center;
+    width: fit-content;
+}
+
+.item.active {
+    color: white;
+}
+
+.button-nav {
+    display: flex;
     text-align: center;
-    color: #333333;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-header .searchbar .input-group input {
-    height: 100%;
-    width: 600px;
-    padding: 0 10px;
-    border: 1px solid #CCCCCC;
-    border-radius: 3px 0 0 3px;
+.button-nav > a {
+    font-size: 16px;
+    color: white;
+    padding: 6px 18px;
+    background-color: #6523E7;
+    border-radius: 6px;
 }
 
-header .searchbar .input-group div {
-    float: right;
-    height: 100%;
-    width: 60px;
-    line-height: 40px;
-    border-color: #CCCCCC;
-    border-width: 1px 1px 1px 0;
-    border-style: solid;
-    background: #F8F8F8;
-    border-radius: 0 3px 3px 0;
+.button-nav > a:hover {
+    background-color: #8D45FF;
 }
 
-header .actions {
-    width: 20%;
-    line-height: 60px;
-    text-align: right;
-    color: #606060;
-    font-size: 20px;
+a:link, a:visited {
+    text-decoration: none;
 }
 
-header .actions .profile {
-    float: right;
-    margin: 10px 20px;
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-    border-radius: 100%;
-    cursor: pointer;
+.item:hover {
+    color: white;
 }
 
-header .actions .profile img {
-    height: 100%;
+.title {
+    margin-top: 80px;
 }
 
-header .actions i {
-    margin: 0 20px;
-    cursor: pointer;
-}
-
-.sidebar {
-    left: 0;
-    height: 100vh;
-    width: 60px;
-    z-index: 2;
-    background: white;
-}
-
-.sidebar .hamburger {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    color: #606060;
-    font-size: 20px;
-}
-
-.sidebar .actions {
-    width: 100%;
-    height: 100%;
-}
-
-.sidebar .actions .action {
-    padding: 20px 0;
-    width: 100%;
-    text-align: center;
-    color: #606060;
-}
-
-.sidebar .actions .action.active {
-    color: #FF0000;
-}
-
-.sidebar .actions .action div {
-    margin-top: 10px;
-    font-size: 10px;
-}
-
-section.content {
-    padding: 50px;
-    width: calc(100% - 60px);
-    min-height: calc(100vh - 60px);
-    margin: 60px 0 0 60px;
-}
-
-section.content::after {
-    content: '';
-    display: table;
-    overflow: hidden;
-    clear: both;
-}
-
-/* Code here */
-.video {
-    float: left;
-    width: calc(100% / 4 - 40px);
-    margin: 20px;
-}
-
-.thumbnail img{
-    height: 220px;
-    max-width: 100%;
-}
-
-.video-desc {
-    margin-top: 20px;
-}
-
-.video-logo img {
-    float: left;
-    width: 60px;
-    margin-right: 20px;
-}
-
-.video-title {
-    font-size: 18px;
-    float: left;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.video-info {
-    font-size: 15px;
-    float: left;
-    color: grey;
+.title > h1 {
     line-height: 12px;
+    font-size: 48px;
+    font-weight: 700;
 }
 
-.views-count {
-    font-size: 15px;
-    margin-top: 5px;
-    float: left;
-    color: grey;
+.title > p {
+    color: rgba(221, 222, 228, 0.7);
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 400px;
 }
