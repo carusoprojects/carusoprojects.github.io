@@ -11,10 +11,18 @@
 }
 
 .work {
+    transition: transform .2s;
     margin-top: 20px;
     border-left: 2px solid var(--color-grey-70);
     padding: 20px;
 }
+
+.work:hover {
+    -ms-transform: scale(1.03); /* IE 9 */
+    -webkit-transform: scale(1.03); /* Safari 3-8 */
+    transform: scale(1.03); 
+}
+
 
 .current {
     border-left: 2px solid var(--color-brand);
