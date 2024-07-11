@@ -1,0 +1,58 @@
+.title > h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.title > p {
+    color: var(--color-grey-70);
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 400px;
+}
+
+.work {
+    margin-top: 20px;
+    border-left: 2px solid var(--color-grey-70);
+    padding: 20px;
+}
+
+.current {
+    border-left: 2px solid var(--color-brand);
+}
+
+.work:hover {
+    background-color: var(--color-exphover);
+}
+
+.exp-title {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.at {
+    margin: 0 2px;
+    color: var(--color-grey-70);
+}
+
+.work-type {
+    font-size: 18px;
+}
+
+.date {
+    color: var(--color-grey-70);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.date > a:hover {
+    text-decoration: underline;
+}
+
+.description {
+    font-size: 14px;
+    color: var(--color-grey);
+}
+
+.job-list {
+    margin: 80px 0;
+}
